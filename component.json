@@ -1,0 +1,9 @@
+{
+  "name": "parse-svg-path",
+  "repo": "jkroso/parse-svg-path",
+  "description": "svg path parser",
+  "keywords": ["svg","path","parse","parser"],
+  "dependencies": {},
+  "scripts": ["index.js"],
+  "license": "MIT"
+}

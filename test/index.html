@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>parse-svg-path tests</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../node_modules/mocha/mocha.css">
+</head>
+<body>
+	<div id="mocha"></div>
+	<script>
+		var mocha = require('mocha')
+
+		mocha.setup({
+			reporter: 'html',
+			timeout: 200,
+			bail: true,
+			ui: 'bdd'
+		})
+
+		require('./parse-svg-path.test')
+
+		mocha.run()
+	</script>
+</body>
+</html>
