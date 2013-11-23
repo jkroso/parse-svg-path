@@ -19,7 +19,7 @@ var parse = require('parse-svg-path')
 
 ### parse(string)
 
-  parse and svg path data string. Generates an Array
+  parse an svg path data string. Generates an Array
   of commands where each command is an Array of the
   form `[command, arg1, arg2, ...]`
 
