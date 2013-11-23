@@ -13,7 +13,7 @@ var length = {a: 7, c: 6, h: 1, l: 2, m: 2, q: 4, s: 4, t: 2, v: 1, z: 0}
  * @type {RegExp}
  */
 
-var segment = /([a-z])\s*((-?\d*\.?\d*(?:e[\-+]?\d+)?\s*,?\s*)+)/ig
+var segment = /([astvzqmhlc])([^astvzqmhlc]*)/ig
 
 /**
  * parse an svg path data string. Generates an Array
