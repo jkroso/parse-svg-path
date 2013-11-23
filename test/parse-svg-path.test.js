@@ -33,8 +33,12 @@ describe('parse', function(){
 	})
 
 	it('lineTo', function(){
-		(function(){ parse('l 10 10 0') }).should.throw()
+		(function(){ parse('l 10 10 0') }).should.throw(/malformed/)
 		parse('l 10,10').should.eql([['l', 10,10]])
+		parse('l10 10 10 10').should.eql([
+			['l', 10, 10],
+			['l', 10, 10]
+		])
 	})
 
 	it('horizontalTo', function(){

@@ -42,7 +42,7 @@ function parse(path) {
 				args.unshift(command)
 				return data.push(args)
 			}
-			if (args < length[type]) throw new Error('')
+			if (args.length < length[type]) throw new Error('malformed path data')
 			data.push([command].concat(args.splice(0, length[type])))
 		}
 	})
