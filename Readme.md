@@ -1,13 +1,13 @@
 
 # parse-svg-path
 
-  A minimal svg path parser. For the delux model see [hughsk/svg-path-parser](https://github.com/hughsk/svg-path-parser).
+  A minimal svg path parser. For the delux model see [hughsk/svg-path-parser](//github.com/hughsk/svg-path-parser) or for the streaming model see [nfroidure/SVGPathData](//github.com/nfroidure/SVGPathData).
 
 ## Installation
 
-_With [packin](//github.com/jkroso/packin) or [component](//github.com/component/component)_
-
-    $ packin add jkroso/parse-svg-path
+- [packin](//github.com/jkroso/packin): `packin add jkroso/parse-svg-path`
+- [component](//github.com/component/component#installing-packages): `component install jkroso/parse-svg-path`
+- [npm](//npmjs.org/doc/cli/npm-install.html): `npm install parse-svg-path`
 
 then in your app:
 
