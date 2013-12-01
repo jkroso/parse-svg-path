@@ -12,6 +12,10 @@ describe('parse', function(){
 		parse('m 1e3 2e-3').should.eql([['m', 1e3, 2e-3]])
 	})
 
+	it('no whitespace between negative sign', function(){
+		parse('M46-86').should.eql([['M',46,-86]])
+	})
+
 	it('overloaded moveTo', function(){
 		parse('m 12.5,52 39,0 0,-40 -39,0 z').should.eql([
 			['m', 12.5, 52],

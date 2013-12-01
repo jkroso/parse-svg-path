@@ -1,6 +1,6 @@
 {
   "name": "parse-svg-path",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "svg path parser",
   "keywords": ["svg","path","parse","parser"],
   "dependencies": {},

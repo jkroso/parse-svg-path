@@ -50,6 +50,6 @@ function parse(path) {
 }
 
 function parseValues(args){
-	args = args.match(/[^\s,]+/g) || []
-	return args.map(Number)
+	args = args.match(/-?[.0-9]+(?:e[-+]?\d+)?/ig)
+	return args ? args.map(Number) : []
 }
