@@ -11,9 +11,7 @@ test: node_modules
 		--bail
 	@sed 's/parse-svg-path/.\//' < Readme.md | jsmd
 
-node_modules: *.json
-	@packin install -Re\
-		--meta deps.json,package.json,component.json \
-		--folder node_modules
+node_modules: package.json
+	@packin install -m $< -f $@
 
 .PHONY: serve test
