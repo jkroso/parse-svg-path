@@ -49,7 +49,9 @@ function parse(path) {
 	return data
 }
 
-function parseValues(args){
-	args = args.match(/-?[0-9]*\.?[0-9]+(?:e[-+]?\d+)?/ig);
-	return args ? args.map(Number) : []
+var number = /-?[0-9]*\.?[0-9]+(?:e[-+]?\d+)?/ig
+
+function parseValues(args) {
+	var numbers = args.match(number)
+	return numbers ? numbers.map(Number) : []
 }
