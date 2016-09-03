@@ -9,9 +9,8 @@ test: node_modules
 		--timeout 500 \
 		--check-leaks \
 		--bail
-	@sed 's/parse-svg-path/.\//' < Readme.md | jsmd
 
 node_modules: package.json
-	@packin install -m $< -f $@
+	@npm install
 
 .PHONY: serve test
