@@ -24,11 +24,29 @@ var segment = /([astvzqmhlc])([^astvzqmhlc]*)/ig
  * @return {Array}
  */
 
-function parse(path) {
-	var data = []
-	path.replace(segment, function(_, command, args){
+	function parse(path) {
+		var data = []
+	/**
+	* long arc and sweep flags
+	* are boolean and can be concatenated like so:
+	* 00, 11 or 01
+	*/
+	path
+	.replaceAll(" 00", " 0 0")
+	.replaceAll(" 01", " 0 1")
+	.replace(segment, function(_, command, args){
 		var type = command.toLowerCase()
 		args = parseValues(args)
+
+		/**
+		* long arc and sweep flags 
+		* are boolean and can be concatenated like so:
+		* 11 or 01
+		*/
+	        if (type === 'a' && args.length < length[type]) {
+	        	let flagArr = args[3].toString().split("");
+	        	args = [args[0], args[1], args[2], +flagArr[0], +flagArr[1], args[4], args[5]];
+	        }
 
 		// overloaded moveTo
 		if (type == 'm' && args.length > 2) {
