@@ -38,6 +38,16 @@ function parse(path) {
 		}
 
 		while (true) {
+			/**
+			* long arc and sweep flags 
+			* are boolean and can be concatenated like so:
+			* 11 or 01
+			*/
+			if (type === 'a' && args.length < length[type]) {
+				let flagArr = args[3].toString().split("");
+				args = [args[0], args[1], args[2], +flagArr[0], +flagArr[1], args[4], args[5]];
+			}
+			
 			if (args.length == length[type]) {
 				args.unshift(command)
 				return data.push(args)
